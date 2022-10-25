@@ -1,0 +1,14 @@
+# Node
+node_modules
+
+# IDE
+.idea
+
+# Build output
+dist
+
+# Environment
+.env
+
+# Nx
+tmp
