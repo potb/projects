@@ -38,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --ignore-scripts --frozen-lockfile
 
+      - name: Build affected projects
+        run: pnpm affected:build
+
       - name: Expose secrets as environment variables
         uses: oNaiPs/secrets-to-env-action@v1
         with:
