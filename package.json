@@ -3,15 +3,33 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "affected:build": "nx affected --target build",
+    "affected:deploy": "nx affected --target deploy",
+    "affected:typecheck": "nx affected --target typecheck",
+    "build": "nx build",
+    "deploy": "nx deploy",
     "start": "nx serve",
-    "build": "nx build"
+    "typecheck": "nx typecheck"
   },
   "devDependencies": {
     "@nrwl/cli": "15.0.2",
     "@nrwl/nx-cloud": "15.0.0",
     "@nrwl/workspace": "15.0.2",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "@vitejs/plugin-react": "2.1.0",
     "nx": "15.0.2",
     "prettier": "2.7.1",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "vite": "3.1.4",
+    "wrangler": "2.1.13"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "packageManager": "pnpm@7.14.1",
+  "engines": {
+    "node": "18.12.0"
   }
 }
