@@ -6,8 +6,6 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
     "importsNotUsedAsValues": "error",
-    "inlineSourceMap": true,
-    "inlineSources": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "module": "ESNext",
@@ -22,11 +20,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {},
-    "removeComments": true,
     "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "useDefineForClassFields": true,
     "useUnknownInCatchVariables": true
   }
 }
