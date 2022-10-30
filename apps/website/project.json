@@ -19,7 +19,7 @@
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "wrangler pages publish ../../dist/apps/website --project-name website"
+        "command": "wrangler pages publish dist/apps/website --project-name website"
       }
     }
   },
