@@ -15,13 +15,7 @@
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "dependsOn": ["^build"]
     }
-  },
-  "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": ["default"],
-    "sharedGlobals": []
   }
 }
