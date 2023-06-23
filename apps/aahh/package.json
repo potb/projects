@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "deploy": "wrangler pages publish .svelte-kit/cloudflare --project-name aahh"
+    "deploy": "wrangler pages publish .svelte-kit/cloudflare --project-name aahh",
+    "prepare": "svelte-kit sync"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "2.3.0",
