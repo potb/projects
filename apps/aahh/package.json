@@ -1,0 +1,9 @@
+{
+  "name": "@potb/aahh",
+  "scripts": {
+    "build": "vite build",
+    "serve": "vite",
+    "deploy": "wrangler pages publish dist --project-name aahh",
+    "typecheck": "tsc"
+  }
+}
