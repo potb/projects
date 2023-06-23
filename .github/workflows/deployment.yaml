@@ -17,10 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Read .nvmrc
-        run: echo "##[set-output name=version;]$(cat .nvmrc)"
-        id: nvm
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
 
@@ -32,11 +28,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.version }}
+          node-version-file: .nvmrc
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --ignore-scripts --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build affected projects
         run: pnpm affected:build
