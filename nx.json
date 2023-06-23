@@ -8,14 +8,18 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e", "typecheck"],
+        "cacheableOperations": ["build", "typecheck"],
         "accessToken": "MGEwMDAwYTItM2MzOC00ZmRkLWFiZDEtYzdlZDk1MmY5YmRhfHJlYWQtd3JpdGU="
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputs": [
+        "{projectRoot}/dist}",
+        "{projectRoot}/.svelte-kit"
+      ]
     }
   }
 }
