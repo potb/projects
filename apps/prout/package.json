@@ -1,0 +1,9 @@
+{
+  "name": "@potb/prout",
+  "scripts": {
+    "build": "vite build",
+    "serve": "vite",
+    "deploy": "wrangler pages publish dist --project-name prout",
+    "typecheck": "tsc"
+  }
+}
