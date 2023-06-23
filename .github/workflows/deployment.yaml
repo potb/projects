@@ -3,6 +3,9 @@ on:
     branches:
       - production
     paths-ignore:
+      - '**.md'
+      - '**.*ignore'
+      - renovate.json
       - '**integration.yaml'
 
 jobs:

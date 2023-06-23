@@ -3,7 +3,11 @@ on:
     branches:
       - production
     paths-ignore:
+      - '**.md'
+      - '**.*ignore'
+      - renovate.json
       - '**deployment.yaml'
+
 
 jobs:
   integration:
