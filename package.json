@@ -14,18 +14,16 @@
   },
   "devDependencies": {
     "@nrwl/nx-cloud": "16.0.5",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "@vitejs/plugin-react": "4.0.1",
+    "@sveltejs/adapter-cloudflare": "2.3.0",
+    "@sveltejs/kit": "1.20.5",
     "nx": "16.3.2",
     "prettier": "2.8.8",
+    "prettier-plugin-svelte": "2.10.1",
+    "svelte": "4.0.0",
+    "svelte-check": "3.4.4",
     "typescript": "5.1.3",
     "vite": "4.3.9",
     "wrangler": "3.1.1"
-  },
-  "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
   },
   "packageManager": "pnpm@8.6.3",
   "engines": {
