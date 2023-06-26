@@ -10,7 +10,7 @@
       eager: true,
       as: 'url',
     })
-  )
+  );
 
   const aahh = async (): Promise<void> => {
     const random = Math.floor(Math.random() * audios.length);
@@ -20,12 +20,10 @@
   };
 </script>
 
-<div>
-  <h1>aahh</h1>
-  <button on:click={aahh}>
-    <img {src} {width} {height} alt="Philippe Etchebest with his mouth open" />
-  </button>
-</div>
+<h1>aahh</h1>
+<button on:click={aahh}>
+  <img {src} {width} {height} alt="Philippe Etchebest with his mouth open" />
+</button>
 
 <style>
   button {
