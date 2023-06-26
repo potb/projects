@@ -1,13 +1,22 @@
 <script lang="ts">
+  import fartSrc from '$lib/assets/fart.mp3';
+  import {
+    src,
+    width,
+    height,
+  } from '$lib/assets/butt.png?format=webp&h=838&w=334&quality=70&meta';
+
   const fart = async (): Promise<void> => {
-    await new Audio('/fart.mp3').play();
+    await new Audio(fartSrc).play();
   };
 </script>
 
 <div>
   <h1>prout</h1>
   <img
-    src="/butt.webp"
+    {src}
+    {width}
+    {height}
     useMap="#butt"
     alt="Myd butt-naked, seen from behind"
   /><button on:click={fart}>

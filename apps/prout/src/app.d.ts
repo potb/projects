@@ -1,12 +1,21 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
 declare global {
-  namespace App {
-    // interface Error {}
-    // interface Locals {}
-    // interface PageData {}
-    // interface Platform {}
+  import 'vite/client';
+
+  namespace App {}
+
+  declare module '*?meta' {
+    export const src: string;
+
+    export const width: number;
+
+    export const height: number;
+  }
+
+  declare module '*&meta' {
+    export const src: string;
+
+    export const width: number;
+
+    export const height: number;
   }
 }
-
-export {};
