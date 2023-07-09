@@ -4,7 +4,7 @@
     src,
     width,
     height,
-  } from '$lib/assets/butt.png?format=webp&h=838&w=334&quality=70&meta';
+  } from '$lib/assets/butt.png?format=webp&h=838&w=334&quality=70&as=meta';
 
   const fart = async (): Promise<void> => {
     await new Audio(fartSrc).play();
