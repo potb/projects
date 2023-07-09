@@ -3,7 +3,7 @@
     src,
     width,
     height,
-  } from '$lib/assets/philippe.png?format=webp&w=400&h=400&quality=60&meta';
+  } from '$lib/assets/philippe.png?format=webp&w=400&h=400&quality=60&as=meta';
 
   const audios = Object.values(
     import.meta.glob<string>('$lib/assets/aahh_*.mp3', {
