@@ -8,7 +8,6 @@ on:
       - renovate.json
       - '**deployment.yaml'
 
-
 jobs:
   integration:
     name: Check branch integration
@@ -43,11 +42,3 @@ jobs:
 
       - name: Build affected projects
         run: pnpm affected:build
-
-      - name: Expose secrets as environment variables
-        uses: oNaiPs/secrets-to-env-action@v1
-        with:
-          secrets: ${{ toJSON(secrets) }}
-
-      - name: Deploy affected projects
-        run: pnpm affected:deploy

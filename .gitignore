@@ -15,3 +15,7 @@ tmp
 
 # Svelte-kit
 .svelte-kit
+
+# Terraform
+.terraform
+terraform.tfvars
