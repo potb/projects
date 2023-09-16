@@ -8,6 +8,11 @@ on:
       - renovate.json
       - '**integration.yaml'
 
+env:
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORGANIZATION }}
+  TF_VAR_cloudflare_api_token: ${{ secrets.TF_VAR_CLOUDFLARE_API_TOKEN }}
+
 jobs:
   deployment:
     name: Deploy to production
@@ -20,8 +25,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v2.4.0
 
       - name: Set Nx SHAs
         uses: nrwl/nx-set-shas@v3
@@ -40,10 +50,8 @@ jobs:
       - name: Build affected projects
         run: pnpm affected:build
 
-      - name: Expose secrets as environment variables
-        uses: oNaiPs/secrets-to-env-action@v1
-        with:
-          secrets: ${{ toJSON(secrets) }}
+      - name: Provision infrastructure
+        run: terraform init && terraform apply -auto-approve
 
       - name: Deploy affected projects
         run: pnpm affected:deploy
