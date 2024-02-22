@@ -9,5 +9,11 @@
     "provision": "terraform init && terraform apply -auto-approve",
     "deploy": "wrangler pages deploy .svelte-kit/cloudflare --project-name aahh",
     "prepare": "svelte-kit sync"
+  },
+  "dependencies": {
+    "svelte": "4.2.11"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.0"
   }
 }
