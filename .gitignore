@@ -12,6 +12,7 @@ dist
 
 # Nx
 tmp
+.nx
 
 # Svelte-kit
 .svelte-kit
