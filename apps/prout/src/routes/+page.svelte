@@ -1,4 +1,5 @@
 <script lang="ts">
+  import slip from '$lib/assets/slip.png?format=webp&h=32&w=32&as=meta';
   import fartSrc from '$lib/assets/fart.mp3';
   import {
     src,
@@ -18,7 +19,8 @@
   {height}
   useMap="#butt"
   alt="Myd butt-naked, seen from behind"
-/><button on:click={fart}>
+  draggable="false"
+/><button on:click={fart} style="cursor: url({slip.src}), pointer;">
   <map name="butt">
     <area
       alt="Accurate mapping of Myd butt"
@@ -32,10 +34,5 @@
   button {
     border: none;
     background: none;
-    cursor: pointer;
-  }
-
-  * {
-    user-select: none;
   }
 </style>
