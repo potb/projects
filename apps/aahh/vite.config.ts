@@ -1,11 +1,11 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
 export default defineConfig({
   plugins: [
-    sveltekit(),
+    svelte(),
     imagetools(),
     SvelteKitPWA({ includeManifestIcons: true }),
   ],
