@@ -32,10 +32,5 @@
   button {
     border: none;
     background: none;
-    cursor: pointer;
-  }
-
-  * {
-    user-select: none;
   }
 </style>
