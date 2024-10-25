@@ -16,7 +16,7 @@ env:
 jobs:
   deployment:
     name: Deploy to production
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions: read-all
 
     steps:
@@ -31,7 +31,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@v4.0.0
 
       - name: Set Nx SHAs
         uses: nrwl/nx-set-shas@v4

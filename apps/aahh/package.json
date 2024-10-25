@@ -11,9 +11,9 @@
     "prepare": "svelte-kit sync"
   },
   "dependencies": {
-    "svelte": "4.2.11"
+    "svelte": "5.1.2"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.0"
+    "@sveltejs/vite-plugin-svelte": "^4.0.0"
   }
 }

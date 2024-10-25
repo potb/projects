@@ -11,7 +11,7 @@ on:
 jobs:
   integration:
     name: Check branch integration
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions: read-all
 
     steps:
@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@v4.0.0
 
       - name: Set Nx SHAs
         uses: nrwl/nx-set-shas@v4
